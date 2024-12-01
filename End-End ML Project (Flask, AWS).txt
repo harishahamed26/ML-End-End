@@ -31,4 +31,47 @@ and so  ->  ml_project.egg-info or mlproject.egg-info will be created included w
 
 final:
 
-git add . 
+git add . # to add all the files in git
+git status # to check the status 
+git commit -m "setup and requirements commit" # to commit the changes
+git push -u origin main # to push into github
+
+
+Tutorial 2:
+
+Project Structure
+Logging
+Exceptional Handling
+
+1. create folder name in src : components and create __init__.py file
+	Components: [components are noting but models]
+		- __init__.py
+		- data_ingestion.py [ ingesting the data ]
+		- data_transformation.py [ transforming the data ]
+		- model_trainer.py [ training the models ]
+2. create folder name in src : pipeline and create __init__.py file
+	pipeline
+		- __init__.py
+		- train_pipeline.py [ pipeline to train the data ]
+		- predict_pipeline.py [ pipeline to predict the data ]
+	
+3. create file name in src : logger.py [ for record logging ]
+4. create file name in src : exception.py [ for exception handling ]
+5. create file name in src : util.py [ common functions ]
+
+
+exception.py:
+	We can actually use the exceptional documentations
+
+logger.py
+	We can actually use the logger documentations
+
+
+
+
+
+
+
+
+
+
