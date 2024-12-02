@@ -7,4 +7,5 @@ catboost
 xgboost
 jupyter
 ipykernel
+dill
 #-e .

@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 
+from src.components.data_transformation import DataTransformationConfig, DataTransformation
+
+
 # class for data ingestion
 
 @dataclass # this decorator help to declare the data variables directly instead of initialising 
@@ -28,7 +31,7 @@ class DataIngestion:
         try:
             df = pd.read_csv("notebook/data/StudentsPerformance.csv")
             logging.info(" Read the CSV data set ")
-            df.rename(columns={'race/ethnicity': 'race_ethnicity', 'parental level of education': 'parental_level_of_education',
+            df.rename(columns={'race/ethnicity': 'race_ethinicity', 'parental level of education': 'parental_level_of_education',
                    'test preparation course':'test_preparation_course','math score': 'math_score',
                     'reading score': 'reading_score', 'writing score':'writing_score'}, inplace=True)
 
@@ -46,8 +49,7 @@ class DataIngestion:
 
             return (
                 self.data_ingestion_config.train_data_path,
-                self.data_ingestion_config.test_data_path,
-                self.data_ingestion_config.raw_data_path
+                self.data_ingestion_config.test_data_path
             )
 
         except Exception as e:
@@ -56,4 +58,8 @@ class DataIngestion:
 
 if __name__ == '__main__':
     obj = DataIngestion()
-    obj.initiate_data_ingestion()  # calling the function to initiate the data ingestion
+    train_data, test_data = obj.initiate_data_ingestion()
+
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformtion(train_data, test_data)
+    
