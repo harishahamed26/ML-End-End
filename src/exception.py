@@ -1,7 +1,7 @@
 # exception.py [ for exception handling ]
 
 import sys
-import logging
+from logger import logging
 
 def error_message_details(error, error_detail:sys):
     _,_,exc_tb = error_detail.exc_info()
@@ -18,6 +18,8 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
+    
+''' tested the exception.py
 if __name__ == '__main__':
     
     try:
@@ -25,4 +27,4 @@ if __name__ == '__main__':
     except Exception as e:
         logging.info("Zero divided exception")
         raise CustomException(e, sys)
-        
+        '''

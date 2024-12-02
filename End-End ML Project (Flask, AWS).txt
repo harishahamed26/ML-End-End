@@ -37,6 +37,8 @@ git commit -m "setup and requirements commit" # to commit the changes
 git push -u origin main # to push into github
 
 
+------------------------------------------------------------------------------------------------
+
 Tutorial 2:
 
 Project Structure
@@ -67,11 +69,97 @@ logger.py
 	We can actually use the logger documentations
 
 
+final:
+
+git add . # to add all the files in git
+git status # to check the status 
+git commit -m "setup and requirements commit" # to commit the changes
+git push -u origin main # to push into github
+
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 3:
+
+Problem Statement: 
+
+This project understands how the student's performance (test scores) is affected by other variables such as Gender, Ethnicity, Parental level of education, Lunch and Test preparation course.
+
+Data Source: https://www.kaggle.com/datasets/spscientist/students-performance-in-exams?resource=download
+
+
+1. create folder name in main project : notebook [ To perform the EDA and Evaluation]
+	- EDA.ipynb [ To perfom the Exploratory Data Analysis ]
+	- model_training.ipynb [ To train and assess the model ]
+2. create folder name in main project : data [ To store the data.csv/ data]
+
+final:
+
+git add . # to add all the files in git
+git status # to check the status 
+git commit -m "setup and requirements commit" # to commit the changes
+git push -u origin main # to push into github
+
+Notes:
+
+xgboost will not work for m1 mac so we have to install -> brew install libomp
+else we will get error message as:
+
+raise XGBoostError(
+xgboost.core.XGBoostError: 
+XGBoost Library (libxgboost.dylib) could not be loaded.
+Likely causes:
+  * OpenMP runtime is not installed
+    - vcomp140.dll or libgomp-1.dll for Windows
+    - libomp.dylib for Mac OSX
+    - libgomp.so for Linux and other UNIX-like OSes
+    Mac OSX users: Run `brew install libomp` to install OpenMP runtime.
+
+  * You are running 32-bit Python on a 64-bit OS
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 4:
 
 
 
 
 
 
+------------------------------------------------------------------------------------------------
+
+Tutorial 5:
 
 
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 6:
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 7:
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 8:
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------
