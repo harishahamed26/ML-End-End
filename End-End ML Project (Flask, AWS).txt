@@ -179,14 +179,23 @@ Tutorial 7:
 Model Hyperparameter tuning
 
 
+Updated the data model_trainer python file 
+
+final:
+
+git add . # to add all the files in git
+git status # to check the status 
+git commit -m "setup and requirements commit" # to commit the changes
+git push -u origin main # to push into github
+
 
 ------------------------------------------------------------------------------------------------
 
 Tutorial 8:
 
+Create Prediction Pipeline Using Flask Web
 
 
-
-
+1. Create app.py in the project main folder
 
 ------------------------------------------------------------------------------------------------

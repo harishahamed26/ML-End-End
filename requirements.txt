@@ -8,4 +8,5 @@ xgboost
 jupyter
 ipykernel
 dill
+flask
 #-e .
