@@ -9,4 +9,4 @@ jupyter
 ipykernel
 dill
 flask
-#-e .
+-e .

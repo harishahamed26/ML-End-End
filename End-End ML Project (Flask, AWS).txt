@@ -1,4 +1,7 @@
-Tutorial 1:
+
+Refrence Playlist (https://www.youtube.com/playlist?list=PLZoTAELRMXVPS-dOaVbAux22vzqdgoGhG)
+
+Tutorial 1: 
 
 1 - Set up github
 	a) new environment
@@ -196,6 +199,116 @@ Tutorial 8:
 Create Prediction Pipeline Using Flask Web
 
 
-1. Create app.py in the project main folder
+1. Create application.py in the project main folder
+
+final:
+
+git add . # to add all the files in git
+git status # to check the status 
+git commit -m "setup and requirements commit" # to commit the changes
+git push -u origin main # to push into github
+
 
 ------------------------------------------------------------------------------------------------
+
+Tutorial 9 :
+
+AWS deploy (Code pipeline)
+
+
+1. create a eb.extension folder and inside create python.config file to config the AWS elastic beanstalk
+
+2. push the updated code to https://github.com/harishahamed26
+
+3. create an environment in AWS EB 
+
+4. Connect with the github repo  ( which act as a code pipeline to AWS EB )
+
+5. click deploy 
+
+Note:
+as the changes made in the code. we need to manually deploy the changes again in AWS EB 
+
+
+------------------------------------------------------------------------------------------------
+
+Tutorial 10 : Reference (https://www.youtube.com/watch?v=8vmKtS8W7IQ)
+
+Docker for deployment : which is more essential to deploy application for CI/CD 
+
+
+Docker file :
+
+FROM <baseImage> eg: python 3.8 -alpine
+COPY <. /<folder-name> > eg: . /app
+WORKDIR < /<folder-name> > eg: /app
+RUN <run-prerequisite> eg: pip install -r requirements.txt
+CMD < cmds> eg: python app.py
+
+save and run the below cmd to create the image
+
+cmd -> docker build -t <image-name> . eg: docker build -t welcome-app .
+
+to check the images: cmd -> docker images
+
+run docker image to container: (host port and container port )
+
+cmd -> docker run -p <port>:<container-port> <image-name> eg: docker run -p 5000:5000 welcome-app
+
+once done. switch to new cmd
+
+to see the no of containers running: cmd -> docker ps 
+
+to stop container: cmd -> docker stop <container-id>
+
+
+To push into the docker hug
+
+cmd -> docker login
+
+usrname and password
+
+
+
+to remove the docker image
+
+cmd -> docker image rm -f <image-name>
+ or docker tag <app-name> <new-app-name> eg: docker tage welcome-app welcome-app1
+
+to build
+
+cmd -> docker build -t <username/appname> eg: docker build -t harish/welcome-app
+
+
+to push
+
+cmd-> docker push <name>:latest eg: docker push welcome-app:latest
+
+to run
+
+cmd-> docker run -d -p 5000:5000 <name>:latest
+
+
+for docker compose (docker-compose.yml)
+
+cmd -> docker compose up
+
+
+to stop compose stop:
+
+cmd -> docker compose stop
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
